@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Gabriel | Editor de Video</title>
+<link rel="stylesheet" href="style.css">
+<style>
+body {
+margin: 0;
+font-family: 'Poppins', sans-serif;
+background: url('https://images.unsplash.com/photo-1470770841072-f978cf4d019e?ixlib=rb-4.0.3&auto=format&fit=crop&w=1950&q=80') no-repeat center center fixed;
+background-size: cover;
+color: #ffffff;
+}
+header {<h1>Gabriel</h1>
+<p>Del fotograma a la emoción</p>
+text-align: center;
+padding: 100px 20px 50px;
+background: rgba(0, 0, 0, 0.6);
+}
+header h1 {
+font-size: 3em;
+margin-bottom: 10px;
+}
+header p {
+font-size: 1.2em;
+}
+section {
+padding: 60px 20px;
+background: rgba(0, 0, 0, 0.5);
+margin: 20px auto;
+max-width: 900px;
+border-radius: 10px;
+}
+h2 {
+text-align: center;
+margin-bottom: 30px;
+}
+.video-container {
+position: relative;
+padding-bottom: 56.25%;
+padding-top: 25px;
+height: 0;
+}
+.video-container iframe {
+position: absolute;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+border: none;
+border-radius: 10px;
+}
+.project-gallery {
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+gap: 20px;
+}
+.project-item {
+background: rgba(255, 255, 255, 0.1);
+padding: 20px;
+text-align: center;
+border-radius: 8px;
+transition: background 0.3s;
+}
+.project-item:hover {
+background: rgba(255, 255, 255, 0.2);
+}
+ul {
+list-style-type: none;
+padding: 0;
+}
+ul li {
+margin: 10px 0;
+text-align: center;
+font-size: 1.1em;
+}
+footer {
+text-align: center;
+padding: 30px 20px;
+font-size: 0.9em;
+background: rgba(0, 0, 0, 0.6);
+}
+a {
+color: #00bcd4;
+text-decoration: none;
+}
+a:hover {
+text-decoration: underline;
+}
+</style>
+</head>
+<body>
+<header>
+<h1>Gabriel</h1>
+<p>Editor de Video y Creador Visual</p>
+</header>
+
+<section id="about">
+<h2>Sobre mí</h2>
+<p>Editor de video especializado en VFX y Motion Graphics. Apasionado por contar historias visuales que conectan.</p>
+</section>
+
+<section id="reel">
+<h2>Demo Reel</h2>
+<div class="video-container">
+<iframe src="https://www.youtube.com/embed/TU_VIDEO_ID" frameborder="0" allowfullscreen></iframe>
+</div>
+</section>
+
+<section id="projects">
+<h2>Proyectos</h2>
+<div class="project-gallery">
+<div class="project-item">Proyecto 1</div>
+<div class="project-item">Proyecto 2</div>
+<div class="project-item">Proyecto 3</div>
+</div>
+</section>
+
+<section id="services">
+<h2>Servicios</h2>
+<ul>
+<li>Edición de Video Profesional</li>
+<li>Composición VFX y Motion Graphics</li>
+<li>Integración de Modelos 3D</li>
+<li>Corrección de Color Básica</li>
+</ul>
+</section>
+
+<section id="contact">
+<h2>Contacto</h2>
+<p>¿Un proyecto en mente? <a [href="mailto:tuemail@correo.com](mailto:href=%22mailto:tuemail@correo.com)">Contáctame aquí</a>.</p>
+</section>
+
+<footer>
+<p>"Historias que se sienten. Ediciones que conectan."</p>
+</footer>
+</body>
+</html>
