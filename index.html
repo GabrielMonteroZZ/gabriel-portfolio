@@ -1,140 +1,136 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Gabriel | Editor de Video</title>
-<link rel="stylesheet" href="style.css">
-<style>
-body {
-margin: 0;
-font-family: 'Poppins', sans-serif;
-background: url('https://cdn.euroinnova.edu.es/img/subidasEditor/e-1618966745.webp') no-repeat center center fixed;
-background-size: cover;
-color: #ffffff;
-}
-header {<h1>Gabriel</h1>
-<p>Del fotograma a la emoción</p>
-text-align: center;
-padding: 100px 20px 50px;
-background: rgba(0, 0, 0, 0.6);
-}
-header h1 {
-font-size: 3em;
-margin-bottom: 10px;
-}
-header p {
-font-size: 1.2em;
-}
-section {
-padding: 60px 20px;
-background: rgba(0, 0, 0, 0.5);
-margin: 20px auto;
-max-width: 900px;
-border-radius: 10px;
-}
-h2 {
-text-align: center;
-margin-bottom: 30px;
-}
-.video-container {
-position: relative;
-padding-bottom: 56.25%;
-padding-top: 25px;
-height: 0;
-}
-.video-container iframe {
-position: absolute;
-top: 0;
-left: 0;
-width: 100%;
-height: 100%;
-border: none;
-border-radius: 10px;
-}
-.project-gallery {
-display: grid;
-grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-gap: 20px;
-}
-.project-item {
-background: rgba(255, 255, 255, 0.1);
-padding: 20px;
-text-align: center;
-border-radius: 8px;
-transition: background 0.3s;
-}
-.project-item:hover {
-background: rgba(255, 255, 255, 0.2);
-}
-ul {
-list-style-type: none;
-padding: 0;
-}
-ul li {
-margin: 10px 0;
-text-align: center;
-font-size: 1.1em;
-}
-footer {
-text-align: center;
-padding: 30px 20px;
-font-size: 0.9em;
-background: rgba(0, 0, 0, 0.6);
-}
-a {
-color: #00bcd4;
-text-decoration: none;
-}
-a:hover {
-text-decoration: underline;
-}
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gabriel | Editor de Video Profesional</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<header>
-<h1>Gabriel</h1>
-<p>Editor de Video y Creador Visual</p>
-</header>
 
-<section id="about">
-<h2>Sobre mí</h2>
-<p>Editor de video especializado en VFX y Motion Graphics. Apasionado por contar historias visuales que conectan.</p>
-</section>
+    <nav class="navbar">
+        <div class="container">
+            <a href="#" class="nav-logo">Gabriel</a>
+            <ul class="nav-menu">
+                <li><a href="#about">Sobre mí</a></li>
+                <li><a href="#reel">Demo Reel</a></li>
+                <li><a href="#projects">Proyectos</a></li>
+                <li><a href="#services">Servicios</a></li>
+                <li><a href="#contact">Contacto</a></li>
+            </ul>
+        </div>
+    </nav>
 
-<section id="reel">
-<h2>Demo Reel</h2>
-<div class="video-container">
-<iframe src="https://www.youtube.com/embed/TU_VIDEO_ID" frameborder="0" allowfullscreen></iframe>
-</div>
-</section>
+    <header id="hero">
+        <div class="hero-content">
+            <h1>Gabriel</h1>
+            <p class="subtitle">Editor de Video y Creador Visual</p>
+            <p class="tagline">Del fotograma a la emoción.</p>
+        </div>
+    </header>
 
-<section id="projects">
-<h2>Proyectos</h2>
-<div class="project-gallery">
-<div class="project-item">Proyecto 1</div>
-<div class="project-item">Proyecto 2</div>
-<div class="project-item">Proyecto 3</div>
-</div>
-</section>
+    <main>
+        <section id="about" class="content-section">
+            <div class="container">
+                <h2>Sobre Mí</h2>
+                <p>Soy Gabriel, un editor de video apasionado con especialización en VFX y Motion Graphics. Mi objetivo es transformar ideas en historias visuales impactantes que conecten profundamente con la audiencia. Busco la excelencia en cada corte, la precisión en cada efecto y la emoción en cada narrativa.</p>
+            </div>
+        </section>
 
-<section id="services">
-<h2>Servicios</h2>
-<ul>
-<li>Edición de Video Profesional</li>
-<li>Composición VFX y Motion Graphics</li>
-<li>Integración de Modelos 3D</li>
-<li>Corrección de Color Básica</li>
-</ul>
-</section>
+        <section id="reel" class="content-section section-dark">
+            <div class="container">
+                <h2>Demo Reel</h2>
+                <div class="video-container">
+                    <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <!-- Reemplaza dQw4w9WgXcQ con el ID de tu video de YouTube -->
+                </div>
+            </div>
+        </section>
 
-<section id="contact">
-<h2>Contacto</h2>
-<p>¿Un proyecto en mente? <a [href="mailto:tuemail@correo.com](mailto:href=%22mailto:tuemail@correo.com)">Contáctame aquí</a>.</p>
-</section>
+        <section id="projects" class="content-section">
+            <div class="container">
+                <h2>Proyectos Destacados</h2>
+                <div class="project-gallery">
+                    <div class="project-item">
+                        <div class="project-thumbnail">
+                            <!-- Opción 1: Miniatura de imagen -->
+                            <img src="https://via.placeholder.com/400x225/333333/FFFFFF?text=Proyecto+1" alt="Miniatura Proyecto 1">
+                            <!-- Opción 2: Iframe directo (si el video es corto y quieres que se reproduzca aquí) -->
+                            <!--
+                            <div class="video-container-thumb">
+                                <iframe src="https://www.youtube.com/embed/VIDEO_ID_PROYECTO_1" frameborder="0" allowfullscreen></iframe>
+                            </div>
+                            -->
+                        </div>
+                        <div class="project-info">
+                            <h3>Nombre del Proyecto Uno</h3>
+                            <p>Una breve descripción de este proyecto. Puedes hablar sobre el cliente, el objetivo, tu rol específico, y las técnicas o software utilizados. Por ejemplo: "Cortometraje documental sobre la vida marina, enfocado en la corrección de color y narrativa visual."</p>
+                            <a href="#" class="btn-view-project">Ver Detalles / Video</a>
+                        </div>
+                    </div>
 
-<footer>
-<p>"Historias que se sienten. Ediciones que conectan."</p>
-</footer>
+                    <div class="project-item">
+                        <div class="project-thumbnail">
+                            <img src="https://via.placeholder.com/400x225/444444/FFFFFF?text=Proyecto+2" alt="Miniatura Proyecto 2">
+                        </div>
+                        <div class="project-info">
+                            <h3>Título del Proyecto Dos</h3>
+                            <p>Descripción detallada del segundo proyecto. Quizás este fue un comercial con mucho motion graphics: "Anuncio para redes sociales para la marca X, creando animaciones de texto y gráficos dinámicos para aumentar el engagement."</p>
+                            <a href="#" class="btn-view-project">Ver Detalles / Video</a>
+                        </div>
+                    </div>
+
+                    <div class="project-item">
+                        <div class="project-thumbnail">
+                             <img src="https://via.placeholder.com/400x225/555555/FFFFFF?text=Proyecto+3" alt="Miniatura Proyecto 3">
+                        </div>
+                        <div class="project-info">
+                            <h3>Proyecto Creativo Tres</h3>
+                            <p>Este proyecto podría ser uno personal o uno con un enfoque en VFX: "Pieza experimental explorando técnicas de composición VFX avanzadas, integrando elementos 3D en metraje real para crear un mundo surrealista."</p>
+                             <a href="#" class="btn-view-project">Ver Detalles / Video</a>
+                        </div>
+                    </div>
+                     <!-- Añade más .project-item según necesites -->
+                </div>
+            </div>
+        </section>
+
+        <section id="services" class="content-section section-dark">
+            <div class="container">
+                <h2>Servicios</h2>
+                <ul class="services-list">
+                    <li><span>✓</span> Edición de Video Profesional y Creativa</li>
+                    <li><span>✓</span> Composición VFX y Motion Graphics Avanzados</li>
+                    <li><span>✓</span> Integración de Modelos 3D y Animación</li>
+                    <li><span>✓</span> Corrección de Color Profesional y Etalonaje</li>
+                    <li><span>✓</span> Edición de Sonido y Mezcla Básica</li>
+                    <li><span>✓</span> Creación de Contenido para Redes Sociales</li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="contact" class="content-section">
+            <div class="container">
+                <h2>Contacto</h2>
+                <p>¿Tienes un proyecto en mente o quieres colaborar? ¡Hablemos!</p>
+                <p>Puedes enviarme un correo a: <a href="mailto:tuemail@ejemplo.com" class="contact-link">tuemail@ejemplo.com</a></p>
+                <!-- Opcional: Añade un formulario de contacto simple o enlaces a redes profesionales -->
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>"Historias que se sienten. Ediciones que conectan."</p>
+            <p>© <span id="currentYear"></span> Gabriel. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById('currentYear').textContent = new Date().getFullYear();
+    </script>
 </body>
 </html>
