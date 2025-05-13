@@ -1,97 +1,374 @@
+/* --- Variables y Reseteo Global --- */
+:root {
+    --primary-color: #00bcd4; /* Cian acentuado */
+    --primary-hover-color: #0097a7;
+    --dark-bg: #121212; /* Fondo oscuro principal */
+    --light-bg-transparent: rgba(255, 255, 255, 0.05); /* Para elementos sobre fondo oscuro */
+    --text-color: #e0e0e0; /* Texto principal claro */
+    --text-secondary-color: #b0b0b0; /* Texto secundario más tenue */
+    --card-bg: #1e1e1e; /* Fondo para tarjetas de proyecto */
+    --border-color: rgba(255, 255, 255, 0.1);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
 body {
-  margin: 0;
-  font-family: 'Poppins', sans-serif;
-  background: url('https://img.freepik.com/free-photo/galaxy-nature-aesthetic-background-starry-sky-mountain-remixed-media_53876-126761.jpg?t=st=1745926733~exp=1745930333~hmac=5e5ea13f81d985ca804149b698417b59a17b163c8e414baeb99b980d6fa72a5b&w=996') no-repeat center center fixed;
-  background-size: cover;
-  color: #ffffff;
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--dark-bg);
+    color: var(--text-color);
+    line-height: 1.7;
+    font-size: 16px; /* Base font size */
 }
 
-header {
-  text-align: center;
-  padding: 100px 20px 50px;
-  background: rgba(0, 0, 0, 0.6);
+.container {
+    width: 90%;
+    max-width: 1100px;
+    margin: 0 auto;
 }
 
-header h1 {
-  font-size: 3em;
-  margin-bottom: 10px;
+/* --- Barra de Navegación --- */
+.navbar {
+    background: rgba(18, 18, 18, 0.85); /* Fondo oscuro semi-transparente */
+    backdrop-filter: blur(10px); /* Efecto de desenfoque para modernidad */
+    color: var(--text-color);
+    padding: 1rem 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
 }
 
-header p {
-  font-size: 1.2em;
+.navbar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
-section {
-  padding: 60px 20px;
-  background: rgba(0, 0, 0, 0.5);
-  margin: 20px auto;
-  max-width: 900px;
-  border-radius: 10px;
+.nav-logo {
+    font-size: 1.8em;
+    font-weight: 700;
+    color: var(--primary-color);
+    text-decoration: none;
 }
 
-h2 {
-  text-align: center;
-  margin-bottom: 30px;
+.nav-menu {
+    list-style: none;
+    display: flex;
 }
 
-.video-container {
-  position: relative;
-  padding-bottom: 56.25%;
-  padding-top: 25px;
-  height: 0;
+.nav-menu li {
+    margin-left: 25px;
 }
 
-.video-container iframe {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  border: none;
-  border-radius: 10px;
+.nav-menu a {
+    color: var(--text-color);
+    text-decoration: none;
+    font-weight: 400;
+    transition: color 0.3s ease;
+    padding: 5px 0;
+    position: relative; /* For underline effect */
 }
 
+.nav-menu a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: var(--primary-color);
+    transition: width 0.3s ease;
+}
+
+.nav-menu a:hover,
+.nav-menu a:focus {
+    color: var(--primary-color);
+}
+
+.nav-menu a:hover::after,
+.nav-menu a:focus::after {
+    width: 100%;
+}
+
+/* --- Sección Hero --- */
+#hero {
+    background: url('https://cdn.euroinnova.edu.es/img/subidasEditor/e-1618966745.webp') no-repeat center center/cover;
+    height: 100vh; /* O ajusta a 80vh o 90vh si prefieres */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    position: relative; /* Para el overlay */
+    padding-top: 60px; /* Ajustar por la navbar fija */
+}
+
+#hero::before { /* Overlay oscuro para legibilidad */
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+}
+
+.hero-content {
+    position: relative; /* Para estar sobre el overlay */
+    z-index: 1;
+}
+
+#hero h1 {
+    font-size: 3.5em;
+    margin-bottom: 0.2em;
+    color: #fff;
+    font-weight: 700;
+}
+
+#hero .subtitle {
+    font-size: 1.5em;
+    margin-bottom: 0.5em;
+    color: var(--primary-color);
+    font-weight: 400;
+}
+
+#hero .tagline {
+    font-size: 1.1em;
+    color: var(--text-secondary-color);
+    font-weight: 300;
+}
+
+/* --- Estilos Generales de Sección --- */
+.content-section {
+    padding: 80px 0;
+}
+
+.content-section h2 {
+    text-align: center;
+    font-size: 2.5em;
+    margin-bottom: 50px;
+    color: var(--primary-color);
+    font-weight: 600;
+}
+
+.section-dark {
+    background-color: var(--card-bg); /* Un poco más claro que el fondo principal */
+}
+.section-dark h2{
+    color: #fff; /* Titulos blancos en secciones oscuras */
+}
+
+
+/* --- Sobre Mí --- */
+#about p {
+    font-size: 1.1em;
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+    color: var(--text-secondary-color);
+}
+
+/* --- Demo Reel & Video Container --- */
+.video-container, .video-container-thumb {
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+    height: 0;
+    overflow: hidden;
+    max-width: 100%;
+    background: #000;
+    border-radius: 8px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
+
+.video-container iframe, .video-container-thumb iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+/* --- Proyectos --- */
 .project-gallery {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
 }
 
 .project-item {
-  background: rgba(255, 255, 255, 0.1);
-  padding: 20px;
-  text-align: center;
-  border-radius: 8px;
-  transition: background 0.3s;
+    background: var(--card-bg);
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
 }
 
 .project-item:hover {
-  background: rgba(255, 255, 255, 0.2);
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(var(--primary-color-rgb), 0.1); /* Usar RGB para opacidad del color primario */
 }
 
-ul {
-  list-style-type: none;
-  padding: 0;
+.project-thumbnail img {
+    width: 100%;
+    height: auto; /* o un alto fijo: 200px; object-fit: cover; */
+    display: block;
+}
+.project-thumbnail .video-container-thumb{
+    border-radius: 0; /* El contenedor del item ya tiene radius */
+    box-shadow: none;
 }
 
-ul li {
-  margin: 10px 0;
-  text-align: center;
-  font-size: 1.1em;
+.project-info {
+    padding: 20px;
+    flex-grow: 1; /* Para que el contenido empuje el botón abajo si las tarjetas tienen alturas diferentes */
+    display: flex;
+    flex-direction: column;
 }
 
+.project-info h3 {
+    font-size: 1.4em;
+    margin-bottom: 10px;
+    color: #fff; /* Titulos blancos dentro de las tarjetas */
+}
+
+.project-info p {
+    font-size: 0.95em;
+    color: var(--text-secondary-color);
+    margin-bottom: 20px;
+    flex-grow: 1;
+}
+
+.btn-view-project {
+    display: inline-block;
+    background-color: var(--primary-color);
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: 600;
+    text-align: center;
+    transition: background-color 0.3s ease;
+    margin-top: auto; /* Empuja el botón al final de la tarjeta */
+}
+
+.btn-view-project:hover {
+    background-color: var(--primary-hover-color);
+}
+
+/* --- Servicios --- */
+.services-list {
+    list-style: none;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.services-list li {
+    font-size: 1.1em;
+    padding: 12px 0;
+    border-bottom: 1px solid var(--border-color);
+    display: flex;
+    align-items: center;
+}
+
+.services-list li:last-child {
+    border-bottom: none;
+}
+
+.services-list li span { /* Para el checkmark o icono */
+    color: var(--primary-color);
+    margin-right: 15px;
+    font-size: 1.3em;
+}
+
+/* --- Contacto --- */
+#contact p {
+    text-align: center;
+    font-size: 1.1em;
+    margin-bottom: 20px;
+}
+
+.contact-link {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.contact-link:hover {
+    color: var(--primary-hover-color);
+    text-decoration: underline;
+}
+
+/* --- Footer --- */
 footer {
-  text-align: center;
-  padding: 30px 20px;
-  font-size: 0.9em;
-  background: rgba(0, 0, 0, 0.6);
+    background: #0a0a0a; /* Un poco más oscuro para el footer */
+    color: var(--text-secondary-color);
+    text-align: center;
+    padding: 40px 0;
+    font-size: 0.9em;
 }
 
-a {
-  color: #00bcd4;
-  text-decoration: none;
+footer p {
+    margin-bottom: 5px;
+}
+footer p:first-child { /* El tagline del footer */
+    font-style: italic;
+    margin-bottom: 15px;
+    color: var(--text-color);
 }
 
-a:hover {
-  text-decoration: underline;
+/* --- Media Queries para Responsividad --- */
+@media (max-width: 768px) {
+    #hero h1 {
+        font-size: 2.5em;
+    }
+    #hero .subtitle {
+        font-size: 1.2em;
+    }
+
+    .content-section h2 {
+        font-size: 2em;
+    }
+
+    .nav-menu {
+        /* Podrías implementar un menú hamburguesa aquí, o simplemente apilarlos */
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        display: none; /* Ocultar por defecto y mostrar con JS en menú hamburguesa */
+                       /* Para una solución simple sin JS, los puedes dejar visibles y se apilarán */
+    }
+    .navbar .container {
+        flex-direction: column; /* O ajustar para menú hamburguesa */
+    }
+    .nav-menu li {
+        margin: 10px 0;
+    }
+
+    /* Si no usas menú hamburguesa, necesitas que se muestren: */
+    /* .nav-menu { display: flex; } */
+
+    .project-gallery {
+        grid-template-columns: 1fr; /* Una columna en móviles */
+    }
+}
+
+@media (max-width: 480px) {
+    body { font-size: 15px; }
+    #hero h1 { font-size: 2em; }
+    #hero .subtitle { font-size: 1em; }
+    .content-section h2 { font-size: 1.8em; }
+    .project-info h3 { font-size: 1.2em; }
 }
